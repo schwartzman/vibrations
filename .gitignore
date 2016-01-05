@@ -4,3 +4,7 @@ logs
 
 # Dependency directory
 node_modules
+config.php
+css
+cache
+js/min
