@@ -1,10 +1,7 @@
-# Logs
 logs
 *.log
 
-# Dependency directory
 node_modules
 config.php
-css
+static
 cache
-js/min

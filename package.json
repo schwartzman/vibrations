@@ -1,0 +1,32 @@
+{
+  "name": "vibrations-earth",
+  "version": "1.0.0",
+  "description": "A minimal soundmap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schwartzman/vibrations"
+  },
+  "author": "Anthony Schwartzman",
+  "license": "WTFPL",
+  "dependencies": {
+    "html5shiv": "latest",
+    "jquery": "^2.1.4",
+    "normalize.css": "latest",
+    "page": "^1.6.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.2.3",
+    "clean-css": "^3.4.9",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.3.3",
+    "scut": "latest",
+    "uglify-js": "^2.6.1"
+  },
+  "scripts": {
+    "install": "cleancss --output static/normalize.css node_modules/normalize.css/normalize.css",
+    "sass": "node-sass --output-style compressed --output static/ scss/",
+    "postsass": "postcss --use autoprefixer --replace static/main.css",
+    "js": "uglifyjs --screw-ie8 --output static/main.js --mangle --compress -- node_modules/page/page.js js/main.js js/mapStyle.js js/initMap.js js/routes.js ",
+    "build": "npm run sass && npm run js"
+  }
+}
