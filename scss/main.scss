@@ -10,6 +10,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 body {
     background: #666;
     font-size: 16px;
+    font-family: 'Exo', sans-serif;
 }
 
 $footerHeight: 5em;
@@ -45,8 +46,9 @@ a {
     color: transparentize(white, 0.5);
     @include scut-vcenter-td('.inner');
     h2 {
-        font-weight: normal;
+        font-weight: 300;
         line-height: 1.5em;
+        letter-spacing: 1px;
     }
     .error-closer {
         $size: 1.5em;
@@ -71,7 +73,6 @@ body > .error {
     height: $footerHeight;
     background: #333;
     p {
-        font-family: 'Exo', sans-serif;
         font-weight: 300;
         margin: 0;
         color: $footerColor;
