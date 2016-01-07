@@ -6,9 +6,7 @@
         <?php
         define('ROOT', $_SERVER['DOCUMENT_ROOT']);
         include ROOT.'/config.php';
-        if ($_SERVER['SERVER_NAME'] == HOST_SITE) : ?>
-        <base href="//<?=HOST_CDN?>">
-        <?php endif; ?>
+        ?>
         <title>Vibrations.Earth</title>
         <meta name="description" content="A soundmap showcasing field recordings from around the world.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
