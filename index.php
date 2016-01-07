@@ -15,9 +15,9 @@
         <meta name="msapplication-config" content="/icons/ieconfig.xml">
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
 
-	    <link rel="stylesheet" href="/static/normalize.css">		
+	    <link rel="stylesheet" href="/static/normalize.css" type="text/css">
 		<link href="//fonts.googleapis.com/css?family=Exo:300,400" rel="stylesheet" type="text/css">
-	    <link rel="stylesheet" href="/static/main.css">
+	    <link rel="stylesheet" href="/static/main.css" type="text/css">
         <!--[if lt IE 9]><script src="/node_modules/html5shiv/html5shiv.min.js"></script><![endif]-->
     </head>
     <body>
