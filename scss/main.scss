@@ -75,13 +75,6 @@ div.soundcloud {
     }
 }
 
-body > .error {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: transparentize(black, 0.3);
-}
-
 #footer {
     $footerColor: #999;
     @include scut-vcenter-td('p');
@@ -102,16 +95,5 @@ body > .error {
                 color: lighten($footerColor, 20%);
             }
         }
-    }
-}
-
-body {
-    position: relative;
-    pre {
-        top: 0;
-        right: 0;
-        position: absolute;
-        background: transparentize(white, 0.3);
-        padding: 1em;
     }
 }

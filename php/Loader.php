@@ -1,6 +1,7 @@
 <?php
 class Loader
 {
+	public $abort = false;
 	function __construct()
 	{
 		$this->cache = new Cache();
