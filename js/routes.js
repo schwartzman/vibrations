@@ -45,10 +45,18 @@ function sound(ctx){
 		errorDisplay('Sorry, there is no sound called<br>'+soundSlug, true)
 		return
 	}
-	if (!mapExists) {
+	// the infowindow doesn't match the desired sound or is absent; the sound exists - open it
+	function clickIt(){
+		google.maps.event.trigger(markers[soundSlug], 'click', false)
+	}
+	if (mapExists) {
+		// we have a map
+		clickIt()
+	} else {
 		// loading a URL directly
 		initMap(locations)
+		google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+			clickIt()
+		})
 	}
-	// we have a map; the infowindow doesn't match the desired sound or is absent; the sound exists - open it
-	google.maps.event.trigger(markers[soundSlug], 'click', false)
 }
