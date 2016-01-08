@@ -43,12 +43,16 @@ $mainLoaderSize: 200px;
     }
 }
 
-div.soundcloud {
-    position: relative;
-    .la-ball-clip-rotate {
-        position: absolute;
-        top: 0;
-    }
+.infowindow-content {
+    overflow: hidden;
+    div.soundcloud {
+        position: relative;
+        font-size: 0;
+        .la-ball-clip-rotate {
+            position: absolute;
+            top: 0;
+        }
+    }    
 }
 
 .error-send {
