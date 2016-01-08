@@ -1,0 +1,43 @@
+/*! Load Awesome v1.1.0 | MIT License | http://github.danielcardoso.net/load-awesome/ */
+
+@mixin ball-spin-specs($size, $border, $speed, $color){
+    width: $size;
+    height: $size;
+    color: $color;
+    & > div {
+        width: $size;
+        height: $size;
+        border-width: $border;
+        animation: ball-clip-rotate $speed linear infinite;
+    }
+}
+
+.la-ball-clip-rotate {
+    display: block;
+    font-size: 0;
+    &, & > div {
+        position: relative;
+        box-sizing: border-box;
+    }
+    & > div {
+        display: inline-block;
+        float: none;
+        background-color: currentColor;
+        border: 0 solid currentColor;
+        background: transparent;
+        border-bottom-color: transparent;
+        border-radius: 100%;
+    }
+}
+
+@keyframes ball-clip-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

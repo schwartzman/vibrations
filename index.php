@@ -18,9 +18,22 @@
 		<link href="//fonts.googleapis.com/css?family=Exo:300,400" rel="stylesheet" type="text/css">
 	    <link rel="stylesheet" href="/static/main.css" type="text/css">
         <!--[if lt IE 9]><script src="/node_modules/html5shiv/html5shiv.min.js"></script><![endif]-->
+
+        <?php
+        function p($x){
+			echo '<pre>';
+			print_r($x);
+			echo '</pre>';
+		}
+        function d($x){
+			echo '<pre>';
+			var_dump($x);
+			echo '</pre>';
+		}
+		?>
     </head>
     <body>
-	    <div id="map"><div class="la-ball-scale-pulse"><div></div><div></div></div></div>
+	    <div id="map"><div class="la-ball-clip-rotate big"><div></div></div></div>
 	    <div id="footer">
 		    <p><span class="sound-count">0</span> sounds on this map - zoom in!<br>
 		    all recordings by <a href="http://anthonyschwartzman.com" target="_blank">Anthony Schwartzman</a><br>

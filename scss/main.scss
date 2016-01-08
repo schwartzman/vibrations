@@ -1,8 +1,5 @@
-$ballBaseSize: 200px;
-$ballBaseSpeed: 3s;
-
 @import '../node_modules/scut/dist/_scut.scss';
-@import 'ball-scale-pulse';
+@import 'ball-clip-rotate';
 
 // google maps resets
 html, body { height: 100%; margin: 0; padding: 0; }
@@ -22,17 +19,36 @@ a {
     color: inherit;
 }
 
+$mainLoaderSize: 200px;
 #map {
     box-sizing: border-box;
     position: relative;
     height: $mainHeight;
+    & > .la-ball-clip-rotate {
+        @include scut-center-absolutely($mainLoaderSize $mainLoaderSize);
+    }
     .error {
         height: 100%;
     }
 }
 
-.la-ball-scale-pulse {
-    @include scut-center-absolutely($ballBaseSize $ballBaseSize);
+.la-ball-clip-rotate {
+    &.big {
+        @include ball-spin-specs( $mainLoaderSize, 5px, 2s, transparentize(#ccc, 0.5) );
+    }
+    &.small {
+        @include ball-spin-specs(20px, 1px, 1.5s, #333);
+        position: absolute;
+        top: 0;
+    }
+}
+
+div.soundcloud {
+    position: relative;
+    .la-ball-clip-rotate {
+        position: absolute;
+        top: 0;
+    }
 }
 
 .error-send {
