@@ -11,6 +11,7 @@
         <meta name="description" content="A soundmap showcasing field recordings from around the world.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="msapplication-config" content="/icons/ieconfig.xml">
+        <link rel="icon" href="/icons/favicon.png">
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
 
 	    <link rel="stylesheet" href="/static/normalize.css" type="text/css">
