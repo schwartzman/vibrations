@@ -48,7 +48,8 @@
 		});
 		$load = new Loader();
         if (!$load->abort) : ?>
-		<script src="//maps.googleapis.com/maps/api/js?key=<?=API_KEY_GMAPS?>"></script>
+        <script src="//maps.googleapis.com/maps/api/js?key=<?=API_KEY_GMAPS?>"></script>
+        <script src="//w.soundcloud.com/player/api.js"></script>
         <script src="<?=$load->cache->web?>"></script>
 	    <?php endif; ?>
         <script src="/static/main.js"></script>

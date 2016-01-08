@@ -11,6 +11,14 @@ function initMap(locations){
 		maxWidth: 300
 	})
 
+	infowindow.addListener('domready', function(){
+		var scWidget = SC.Widget($('.soundcloud > iframe')[0])
+		scWidget.bind(SC.Widget.Events.READY, function(){
+			debug && console.log('scWidget ready')
+			$('.loader').hide()
+		})
+	})
+
 	infowindow.addListener('closeclick', function(){
 			infowindowOpen = false
 			page('/')
