@@ -30,7 +30,7 @@
         <script>window.jQuery || document.write('<script src="/node_modules/jquery/dist/jquery.min.js"><\/script>')</script>
         <?php 
 		spl_autoload_register(function ($class) {
-		    include ROOT.'/lib/'.$class.'.php';
+		    include ROOT.'/php/'.$class.'.php';
 		});
 		include ROOT.'/lib/locations.php';
         if (!$abort) : ?>
