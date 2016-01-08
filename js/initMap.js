@@ -45,7 +45,7 @@ function initMap(locations){
 		
 		marker.addListener('click', (function(marker, i) {
 			return function(pushRoute){
-				infowindow.setContent('<div class="infowindow-content"><p><span style="font-weight: bold">'+locations[i].title+'</span><br>'+locations[i].date+'<br>'+locations[i].time+'</p><div class="soundcloud"><iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+locations[i].id+'&amp;color=ff9900&amp;inverse=false&amp;auto_play=false&amp;show_user=false"></iframe><div class="la-ball-clip-rotate small loader"><div></div></div></div></div>')
+				infowindow.setContent('<div class="infowindow-content"><p><span class="title">'+locations[i].title+'</span>'+locations[i].date+'<br>'+locations[i].time+'</p><div class="soundcloud"><iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+locations[i].id+'&amp;color=ff9900&amp;inverse=false&amp;auto_play=false&amp;show_user=false"></iframe><div class="la-ball-clip-rotate small loader"><div></div></div></div></div>')
 				infowindow.open(map, marker)
 				infowindowSlug = locations[i].slug
 				infowindowOpen = true

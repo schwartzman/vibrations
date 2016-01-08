@@ -45,6 +45,12 @@ $mainLoaderSize: 200px;
 
 .infowindow-content {
     overflow: hidden;
+    line-height: 1.3em;
+    span.title {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 7px;
+    }
     div.soundcloud {
         position: relative;
         font-size: 0;
