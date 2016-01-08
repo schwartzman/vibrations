@@ -33,10 +33,10 @@
 		spl_autoload_register(function ($class) {
 		    include ROOT.'/php/'.$class.'.php';
 		});
-		include ROOT.'/lib/locations.php';
-        if (!$abort) : ?>
+		$load = new Loader();
+        if (!$load->abort) : ?>
 		<script src="//maps.googleapis.com/maps/api/js?key=<?=API_KEY_GMAPS?>"></script>
-        <script src="<?=$cache->web?>"></script>
+        <script src="<?=$load->cache->web?>"></script>
 	    <?php endif; ?>
         <script src="/static/main.js"></script>
         <script>
