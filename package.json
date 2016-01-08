@@ -24,9 +24,9 @@
   },
   "scripts": {
     "css": "cleancss --output static/normalize.css node_modules/normalize.css/normalize.css",
-    "sass": "node-sass --output-style expanded --output static/ scss/",
+    "sass": "node-sass --output-style compressed --output static/ scss/",
     "postsass": "postcss --use autoprefixer --replace static/main.css",
-    "js": "uglifyjs --screw-ie8 --output static/main.js --beautify -- node_modules/page/page.js js/main.js js/mapStyle.js js/initMap.js js/routes.js",
+    "js": "uglifyjs --screw-ie8 --output static/main.js --mangle --compress -- node_modules/page/page.js js/main.js js/mapStyle.js js/initMap.js js/routes.js",
     "build": "npm run css && npm run sass && npm run js"
   }
 }
