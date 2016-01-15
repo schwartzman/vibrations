@@ -7,7 +7,7 @@
         define('ROOT', $_SERVER['DOCUMENT_ROOT']);
         include ROOT.'/config.php';
         ?>
-        <title>Vibrations.Earth</title>
+        <title>Vibrations</title>
         <meta name="description" content="A soundmap showcasing field recordings from around the world.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="msapplication-config" content="/icons/ieconfig.xml">
