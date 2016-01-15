@@ -7,6 +7,13 @@ var infowindowOpen = false
 var infowindowSlug
 var debug = false
 
+function setTitle(input) {
+	var input = input || null
+	var titleStem = 'Vibrations'
+	var append = (input) ? ': '+input : ''
+	$(document).prop('title', titleStem+append)
+}
+
 function errorDisplay(msg, closer){
 	var closer = closer || false
 	var result = '<h2>'+msg+'</h2>'

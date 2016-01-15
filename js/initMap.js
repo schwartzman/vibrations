@@ -17,11 +17,14 @@ function initMap(locations){
 			debug && console.log('scWidget ready')
 			$('.loader').hide()
 		})
+		var $content = $($.parseHTML(infowindow.content))
+		setTitle( $content.find('span.title').text() )
 	})
 
 	infowindow.addListener('closeclick', function(){
-			infowindowOpen = false
-			page('/')
+		infowindowOpen = false
+		page('/')
+		setTitle()
 	})
 
 	for (var i = 0; i < locations.length; i++) {
@@ -54,7 +57,6 @@ function initMap(locations){
 				if (pushRoute) { markerClicked(locations[i].slug) }
 			}
 		})(marker, i))
-
 	}
 
 	map.fitBounds(bounds)

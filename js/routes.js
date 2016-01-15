@@ -7,6 +7,7 @@ page.start()
 
 function index(){
 	debug && console.log('----------index----------')
+	setTitle()
 	if (!mapExists) {
 		debug && console.log('no map')
 		initMap(locations)
