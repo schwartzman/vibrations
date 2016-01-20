@@ -23,10 +23,14 @@
     "uglify-js": "^2.6.1"
   },
   "scripts": {
-    "css": "cleancss --output static/normalize.css node_modules/normalize.css/normalize.css",
-    "sass": "node-sass --output-style compressed --output static/ scss/",
-    "postsass": "postcss --use autoprefixer --replace static/main.css",
-    "js": "uglifyjs --screw-ie8 --output static/main.js --mangle --compress -- node_modules/page/page.js js/main.js js/mapStyle.js js/initMap.js js/routes.js",
-    "build": "npm run css && npm run sass && npm run js"
+    "build:css": "cleancss --output static/normalize.css node_modules/normalize.css/normalize.css",
+    "build:sass": "node-sass --output-style compressed --output static/ scss/",
+    "postbuild:sass": "postcss --use autoprefixer --replace static/main.css",
+    "watch:sass": "watch 'npm run build:sass' scss/",
+    "build:js": "uglifyjs --screw-ie8 --output static/main.js --mangle --compress -- node_modules/page/page.js js/main.js js/mapStyle.js js/initMap.js js/routes.js",
+    "watch:js": "watch 'npm run build:js' js/",
+    "build": "npm run build:css && npm run build:sass && npm run build:js",
+    "build:watch": "parallelshell 'npm run watch:sass' 'npm run watch:js'",
+    "reload": "livereloadx -y http://vibrations.loc"
   }
 }
