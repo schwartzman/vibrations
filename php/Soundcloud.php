@@ -16,7 +16,7 @@ class Soundcloud
 		$i = 0;
 		foreach ($obj as $track) :
 			$desc = $track->description;
-			preg_match('/(\d+\.\d+),\s? (\d+\.\d+)/', $desc, $geo);
+			preg_match('/(-?\d+\.\d+),\s?(-?\d+\.\d+)/', $desc, $geo);
 			preg_match('/(\d{4}-\d{2}-\d{2})/', $desc, $date);
 			preg_match('/(\d{2}:\d{2})/', $desc, $time);
 			$player = '<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'.$track->id.'&amp;color=ff9900&amp;inverse=false&amp;auto_play=false&amp;show_user=false"></iframe>';
