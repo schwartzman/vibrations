@@ -24,12 +24,12 @@
 	    <div id="footer">
 		    <p><span class="sound-count">0</span> sounds on this map - zoom in!<br>
 		    all recordings by <a href="http://anthonyschwartzman.com" target="_blank">Anthony Schwartzman</a><br>
-		    full catalogue on <a href="//soundcloud.com/anthony-schwartzman" target="_blank">SoundCloud</a></p>
+		    full catalogue on <a href="//soundcloud.com/anthony-schwartzman/tracks" target="_blank">SoundCloud</a></p>
 	    </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/node_modules/jquery/dist/jquery.min.js"><\/script>')</script>
-        <?php 
+        <?php
 		spl_autoload_register(function ($class) {
 		    include ROOT.'/php/'.$class.'.php';
 		});
