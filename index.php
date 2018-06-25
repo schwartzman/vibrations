@@ -1,8 +1,16 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=<?=ID_GA?>"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '<?=ID_GA?>');
+        </script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
         <?php
         define('ROOT', $_SERVER['DOCUMENT_ROOT']);
         include ROOT.'/config.php';
@@ -22,8 +30,8 @@
     <body>
 	    <div id="map"><div class="la-ball-clip-rotate big"><div></div></div></div>
 	    <div id="footer">
-		    <p><span class="sound-count">0</span> sounds on this map - zoom in!<br>
-		    all recordings by <a href="http://anthonyschwartzman.com" target="_blank">Anthony Schwartzman</a><br>
+		    <p><span class="sound-count">0</span> sounds on this map - zoom in to the clusters!<br>
+		    all recordings by <a href="https://anthonyschwartzman.com" target="_blank">Anthony Schwartzman</a><br>
 		    full catalogue on <a href="//soundcloud.com/anthony-schwartzman/tracks" target="_blank">SoundCloud</a></p>
 	    </div>
 
@@ -40,13 +48,5 @@
         <script src="<?=$load->cache->web?>"></script>
 	    <?php endif; ?>
         <script src="/static/main.js"></script>
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','<?=ID_GA?>','auto');ga('send','pageview');
-        </script>
     </body>
 </html>
