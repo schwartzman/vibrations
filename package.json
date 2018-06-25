@@ -7,7 +7,7 @@
     "url": "https://github.com/schwartzman/vibrations"
   },
   "author": "Anthony Schwartzman",
-  "license": "WTFPL",
+  "license": "MIT",
   "dependencies": {
     "html5shiv": "latest",
     "jquery": "^2.1.4",
