@@ -1,6 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
+        <?php
+        define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+        include ROOT.'/config.php';
+        ?>
         <script async src="https://www.googletagmanager.com/gtag/js?id=<?=ID_GA?>"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -11,21 +15,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <?php
-        define('ROOT', $_SERVER['DOCUMENT_ROOT']);
-        include ROOT.'/config.php';
-        ?>
         <title>Vibrations</title>
         <meta name="description" content="A soundmap showcasing field recordings from around the world.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="msapplication-config" content="/icons/ieconfig.xml">
-        <link rel="icon" href="/icons/favicon.png">
-        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+        <meta name="msapplication-config" content="/static/icons/ieconfig.xml">
+        <link rel="icon" href="/static/icons/favicon.png">
+        <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
 
-	    <link rel="stylesheet" href="/static/normalize.css" type="text/css">
+	    <link href="/static/dist/normalize.css" rel="stylesheet" type="text/css">
 		<link href="//fonts.googleapis.com/css?family=Exo:300,400" rel="stylesheet" type="text/css">
-	    <link rel="stylesheet" href="/static/main.css" type="text/css">
-        <!--[if lt IE 9]><script src="/node_modules/html5shiv/html5shiv.min.js"></script><![endif]-->
+	    <link href="/static/dist/main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
 	    <div id="map"><div class="la-ball-clip-rotate big"><div></div></div></div>
@@ -35,7 +34,7 @@
 		    full catalogue on <a href="//soundcloud.com/anthony-schwartzman/tracks" target="_blank">SoundCloud</a></p>
 	    </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/node_modules/jquery/dist/jquery.min.js"><\/script>')</script>
         <?php
 		spl_autoload_register(function ($class) {
@@ -47,6 +46,6 @@
         <script src="//w.soundcloud.com/player/api.js"></script>
         <script src="<?=$load->cache->web?>"></script>
 	    <?php endif; ?>
-        <script src="/static/main.js"></script>
+        <script src="/static/dist/main.js"></script>
     </body>
 </html>

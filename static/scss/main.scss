@@ -1,4 +1,4 @@
-@import '../node_modules/scut/dist/_scut.scss';
+@import '../../node_modules/scut/dist/_scut.scss';
 @import 'ball-clip-rotate';
 
 // google maps resets
@@ -58,7 +58,7 @@ $mainLoaderSize: 200px;
             position: absolute;
             top: 0;
         }
-    }    
+    }
 }
 
 .error-send {

@@ -1,7 +1,6 @@
 logs
 *.log
-
 node_modules
 config.php
-static
 cache
+dist
