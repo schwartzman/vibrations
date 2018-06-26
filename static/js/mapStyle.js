@@ -1,7 +1,7 @@
 // https://snazzymaps.com/style/2699/love-lock-4
 // ...hacked to bits
 
-var mapStyle = [{
+export default [{
     "featureType": "all",
     "elementType": "all",
     "stylers": [{
