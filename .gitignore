@@ -1,6 +1,8 @@
+__pycache__
 logs
 *.log
 node_modules
-config.php
 cache
 dist
+config-g.yaml
+config-sc.yaml
