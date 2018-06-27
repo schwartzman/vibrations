@@ -3,7 +3,7 @@ import page from 'page'
 import t from './tools'
 import routes from './routes'
 
-if (typeof(locations) == 'undefined') {
+if (locations.length == 0) {
 	t.errorDisplay('Sorry, something went wrong.<br>Please try again later.')
 	throw 'fatal error: No data'
 }
