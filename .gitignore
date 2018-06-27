@@ -1,8 +1,6 @@
 __pycache__
-logs
-*.log
-node_modules
-cache
+_tmp
+config.yaml
 dist
-config-g.yaml
-config-sc.yaml
+node_modules
+revision.txt
