@@ -1,0 +1,8 @@
+google:
+  api_key_gmaps: xxx
+  ga_id: UA-xxxxxxx-x
+soundcloud:
+  api_key: xxx
+  user_id: 000
+s3:
+  bucket: <bucket_name>

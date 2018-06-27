@@ -1,7 +1,6 @@
-logs
-*.log
-
+__pycache__
+_tmp
+config.yaml
+dist
 node_modules
-config.php
-static
-cache
+revision.txt
