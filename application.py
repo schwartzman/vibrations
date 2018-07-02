@@ -3,13 +3,13 @@ import json
 
 from flask import Flask
 from flask import render_template
+from importlib_resources import read_text
 from werkzeug.contrib.fixers import ProxyFix
 from yaml import load
 
 from lib.soundcloud import soundcloud_get
 
-with open('conf/config.yaml') as f:
-    conf = load(f)
+conf = load(read_text('conf', 'config.yaml'))
 
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app)
