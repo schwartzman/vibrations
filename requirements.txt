@@ -10,7 +10,7 @@ importlib-resources==1.0.1
 itsdangerous==0.24
 Jinja2==2.10
 jmespath==0.9.3
-livereload==2.5.1
+livereload==2.5.1 # pyup: != 2.5.2 # buggy
 MarkupSafe==1.0
 python-dateutil==2.7.3
 PyYAML==4.1
