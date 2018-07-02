@@ -6,11 +6,11 @@ readme = Path(__file__) / '..' / 'README.md'
 with readme.resolve().open() as f:
     long_description = f.read()
 
+
 setup(
     name='vibrations',
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
-    url='https://github.com/schwartzman/vibrations',
     author='Anthony Schwartzman',
     author_email='anthony@anthonyschwartzman.com',
     description='A minimalistic soundmap',
@@ -31,6 +31,9 @@ setup(
         'requests'
     ],
     extras_require={
-        'dev': ['livereload']
+        'dev': [
+            'livereload',
+            'zappa'
+        ]
     }
 )
