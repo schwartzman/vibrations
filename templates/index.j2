@@ -19,7 +19,6 @@
         <link rel="icon" href="/static/icons/favicon.png?v=2">
         <link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
 
-	    <link href="/static/dist/normalize.css?v={{ bust }}" rel="stylesheet" type="text/css">
 		<link href="//fonts.googleapis.com/css?family=Exo:300,400" rel="stylesheet" type="text/css">
 	    <link href="/static/dist/main.css?v={{ bust }}" rel="stylesheet" type="text/css">
     </head>
@@ -31,9 +30,7 @@
 		    full catalogue on <a href="//soundcloud.com/anthony-schwartzman/tracks" target="_blank">SoundCloud</a></p>
 	    </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/{{ jq_version }}/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/static/dist/jquery.min.js"><\/script>')</script>
-
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
         <script src="//maps.googleapis.com/maps/api/js?key={{ conf.api_key_gmaps }}"></script>
         <script src="//w.soundcloud.com/player/api.js"></script>
 

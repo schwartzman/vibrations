@@ -1,5 +1,4 @@
 import boto3
-import json
 
 from flask import Flask
 from flask import render_template
@@ -33,8 +32,6 @@ def build_ctx():
     ctx = {'conf': conf['google']}
     with open('revision.txt') as f:
         ctx.update({'bust': f.readline()})
-    with open('package.json') as f:
-        ctx.update({'jq_version': json.load(f)['dependencies']['jquery'][1:]})
     ctx.update({'locations': get_locations()})
     return ctx
 

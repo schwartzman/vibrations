@@ -1,6 +1,7 @@
 __pycache__
 _tmp
 config.yaml
-dist
 node_modules
 revision.txt
+static/css
+static/dist
