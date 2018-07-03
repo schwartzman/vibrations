@@ -7,8 +7,8 @@ export default {
 
 		t.setTitle()
 		const map = $('#map').data()
-		if (ctx.state.click && map.map) {
-			t.debug && console.log('human click')
+		if (map.map) {
+			t.debug && console.log('map exists, closing infowindow')
 			if (map.infowindow.map) {
 				map.infowindow.close()
 			}
@@ -32,7 +32,7 @@ export default {
 		let map = $('#map').data()
 
 		if (ctx.state.click && map.map) {
-			t.debug && console.log('human click')
+			t.debug && console.log('human click or history')
 			const iwSlug = $(map.infowindow.getContent()).data('slug')
 			if (!map.infowindow.map || iwSlug != soundSlug) {
 				triggerClick(map.markers)
