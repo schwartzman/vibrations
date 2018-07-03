@@ -21,14 +21,13 @@
         "normalize.css": "^8.0.0",
         "postcss-clean": "^1.1.0",
         "postcss-cli": "^5.0.1",
-        "scut": "^1.4.0",
         "uglify-js": "^3.4.2"
     },
     "scripts": {
         "serve": "python reload.py",
         "watch:style": "watch 'npm run build:scss' static/scss",
         "watch:script": "watch 'npm run build:script-dev' static/js",
-        "watch": "parallelshell 'npm run watch:scss' 'npm run watch:script'",
+        "watch": "parallelshell 'npm run watch:style' 'npm run watch:script'",
         "build:css": "postcss node_modules/normalize.css/normalize.css --use postcss-clean --no-map --dir static/css",
         "build:scss": "node-sass --output-style compressed static/scss/main.scss | postcss --use autoprefixer --no-map -o static/css/main.css",
         "postbuild:scss": "cat static/css/normalize.css static/css/main.css > static/dist/main.css",

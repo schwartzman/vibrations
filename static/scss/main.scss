@@ -1,103 +1,95 @@
-@import '../../node_modules/scut/dist/_scut.scss';
-@import 'ball-clip-rotate';
+@import 'spinner';
+
+@mixin ff { font-family: 'Exo 2', sans-serif; }
 
 // google maps resets
 html, body { height: 100%; margin: 0; padding: 0; }
 
+// ...all the things!
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
 body {
+    @include ff;
     background: #666;
     font-size: 16px;
-    font-family: 'Exo', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
-
-$footerHeight: 5em;
-
-$mainHeight: calc(100% - #{$footerHeight});
 
 a {
     text-decoration: none;
     color: inherit;
 }
 
-$mainLoaderSize: 200px;
 #map {
-    box-sizing: border-box;
-    position: relative;
-    height: $mainHeight;
-    & > .la-ball-clip-rotate {
-        @include scut-center-absolutely($mainLoaderSize $mainLoaderSize);
-    }
-    .error {
-        height: 100%;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0;
 }
 
-.la-ball-clip-rotate {
+.spinner {
     &.big {
-        @include ball-spin-specs( $mainLoaderSize, 5px, 2s, transparentize(#ccc, 0.5) );
+        @include spinner-specs(200px, 5px, 2s, transparentize(#ccc, 0.5));
     }
     &.small {
-        @include ball-spin-specs(20px, 1px, 1.5s, #333);
-        position: absolute;
-        top: 0;
+        @include spinner-specs(20px, 1px, 1.5s, #333);
     }
 }
 
 .infowindow-content {
+    @include ff;
+    font-weight: 300;
     overflow: hidden;
-    line-height: 1.3em;
+    p {
+        margin: 0.2em 0 1em 0;
+        line-height: 1.6;
+    }
     span.title {
+        font-size: 0.85rem;
         font-weight: 500;
         display: block;
-        margin-bottom: 7px;
     }
     div.soundcloud {
         position: relative;
-        font-size: 0;
-        .la-ball-clip-rotate {
+        iframe {
+            display: block;
+        }
+        .spinner {
             position: absolute;
             top: 0;
         }
     }
 }
 
-.error-send {
-    display: none;
-}
-
 .error {
-    width: 100%;
-    height: $mainHeight;
     text-align: center;
     color: transparentize(white, 0.5);
-    @include scut-vcenter-td('.inner');
     h2 {
+        margin: 0 0 0.8em 0;
         font-weight: 300;
-        line-height: 1.5em;
-        letter-spacing: 1px;
+        line-height: 1.5;
     }
     .error-closer {
-        $size: 1.5em;
-        @include scut-circle($size, transparent);
-        font-size: $size;
-        border: solid 1px;
-        line-height: $size;
+        font-size: 3em;
+        font-weight: bold;
     }
 }
 
 #footer {
-    $footerColor: #999;
-    @include scut-vcenter-td('p');
-    width: 100%;
-    height: $footerHeight;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em 0;
     background: #333;
+    $footerColor: #999;
     p {
         font-weight: 300;
         margin: 0;
         color: $footerColor;
         text-align: right;
         font-size: 0.9em;
-        line-height: 1.2em;
+        line-height: 1.3;
         padding: 0 1rem;
         a {
             color: lighten($footerColor, 10%);

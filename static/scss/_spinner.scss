@@ -1,6 +1,6 @@
-/*! Load Awesome v1.1.0 | MIT License | http://github.danielcardoso.net/load-awesome/ */
+/* Load Awesome v1.1.0 | MIT License | http://github.danielcardoso.net/load-awesome/ */
 
-@mixin ball-spin-specs($size, $border, $speed, $color){
+@mixin spinner-specs($size, $border, $speed, $color){
     width: $size;
     height: $size;
     color: $color;
@@ -12,7 +12,7 @@
     }
 }
 
-.la-ball-clip-rotate {
+.spinner {
     display: block;
     &, & > div {
         position: relative;

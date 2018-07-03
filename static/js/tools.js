@@ -1,10 +1,10 @@
 export default {
-	debug: true,
+	debug: false,
 
 	errorDisplay (msg, closer = false){
-		let res = '<h2>'+msg+'</h2>'
-		res += (closer) ? '<a href="/" class="error-closer">&#x2a09</a>' : ''
-		res = '<div class="error"><div class="inner">'+res+'</div></div>'
+		let c = `<h2>${msg}</h2>`
+		c += (closer) ? '<a href="/" class="error-closer">&#x2a09</a>' : ''
+		const res = `<div class="error">${c}</div>`
 		$('#map').html(res)
 	},
 
