@@ -1,0 +1,23 @@
+production:
+  app_function: application.app
+  aws_region: us-east-1
+  exclude:
+    - '*.md'
+    - .gitignore
+    - .npmrc
+    - __pycache__
+    - conf/config-sample.yaml
+    - LICENSE
+    - livereload
+    - node_modules
+    - package*.json
+    - reload.py
+    - requirements.txt
+    - setup.py
+    - static
+    - zappa_settings.yml
+  log_level: WARNING
+  profile_name: default
+  project_name: vibrations
+  runtime: python3.6
+  s3_bucket: vibrations.earth-zappa
