@@ -1,3 +1,4 @@
+.npmrc
 __pycache__
 _tmp
 config.yaml
