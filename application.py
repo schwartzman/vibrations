@@ -15,6 +15,12 @@ app.wsgi_app = ProxyFix(app.wsgi_app)
 
 
 def get_locations():
+    """Retrieve and cache sounds & metadata from SoundCloud.
+
+    Returns:
+        string -- JSON array of sound & metadata objects
+        None   -- on failure
+    """
     s3 = boto3.resource('s3')
     cache = s3.Object(conf['s3']['bucket'], 'cache/locations.json')
     try:

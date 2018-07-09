@@ -4,6 +4,16 @@ import requests
 
 
 def get(uid, api_key):
+    """Retrieve raw response from SoundCloud API.
+
+    Arguments:
+        uid {str}
+        api_key {str}
+
+    Returns:
+        list -- SoundCloud sound dicts
+        None -- on failure
+    """
     payload = {'client_id': api_key}
     url = 'https://api.soundcloud.com/users/{}/tracks'.format(uid)
     try:
@@ -15,6 +25,14 @@ def get(uid, api_key):
 
 
 def parse(sounds):
+    """Unpack, validate, organize, and reduce SoundCloud metadata.
+
+    Arguments:
+        sounds {list} -- dicts
+
+    Returns:
+        list -- sound dicts
+    """
     res = []
     for s in sounds:
         d = s['description']
@@ -51,6 +69,16 @@ def parse(sounds):
 
 
 def soundcloud_get(uid, api_key):
+    """Deliver tidy and usable sounds & metadata.
+
+    Arguments:
+        uid {str}
+        api_key {str}
+
+    Returns:
+        str  -- JSON array of sound & metadata objects
+        None -- on failure
+    """
     res = get(uid, api_key)
     if res is None:
         return None
