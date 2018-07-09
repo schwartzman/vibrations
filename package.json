@@ -33,7 +33,7 @@
         "postbuild:scss": "cat static/css/normalize.css static/css/main.css > static/dist/main.css",
         "build:script": "browserify static/js/main.js --transform [babelify --presets env] | uglifyjs --compress --mangle -o static/dist/main.js",
         "build:script-dev": "browserify static/js/main.js --transform [babelify --presets env] -o static/dist/main.js",
-        "build:bust": "git rev-parse HEAD | cut -c 1-8 > revision.txt",
+        "build:bust": "git rev-parse HEAD | cut -c 1-8 > conf/revision.txt",
         "build": "npm run build:css && npm run build:scss && npm run build:script && npm run build:bust",
         "deploy:lambda": "zappa update production",
         "deploy:s3": "aws s3 sync static s3://vibrations.earth-static/static --exclude scss/* --exclude css/* --exclude js/*",

@@ -35,9 +35,10 @@ def get_locations():
 
 @app.context_processor
 def build_ctx():
-    ctx = {'conf': conf['google']}
-    with open('revision.txt') as f:
-        ctx.update({'bust': f.readline()})
+    ctx = {
+        'conf': conf['google'],
+        'bust': read_text('conf', 'revision.txt').strip()
+    }
     return ctx
 
 
