@@ -27,12 +27,10 @@
 		    all recordings by <a href="https://anthonyschwartzman.com" target="_blank">Anthony Schwartzman</a><br>
 		    full catalogue on <a href="//soundcloud.com/anthony-schwartzman/tracks" target="_blank">SoundCloud</a></p>
 	    </div>
-
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
         <script src="//maps.googleapis.com/maps/api/js?key={{ conf.api_key_gmaps }}"></script>
         <script src="//w.soundcloud.com/player/api.js"></script>
-
-        <script type="text/javascript">const locations = {{ locations }}</script>
+        <script src="/cache/locations.js"></script>
         <script src="/static/dist/main.js?v={{ bust }}"></script>
     </body>
 </html>

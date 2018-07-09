@@ -24,7 +24,7 @@ def get_locations():
         locs = soundcloud_get(sc['user_id'], sc['api_key'])
         if locs:
             cache.put(Body=locs)
-    return locs or []
+    return locs
 
 
 @app.context_processor
@@ -32,8 +32,12 @@ def build_ctx():
     ctx = {'conf': conf['google']}
     with open('revision.txt') as f:
         ctx.update({'bust': f.readline()})
-    ctx.update({'locations': get_locations()})
     return ctx
+
+
+@app.route('/cache/locations.js')
+def cache():
+    return render_template('locations.js.j2', locations=get_locations())
 
 
 @app.route('/', defaults={'path': ''})
