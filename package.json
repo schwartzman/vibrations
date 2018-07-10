@@ -42,6 +42,7 @@
         "postinstall": "npm run build:css",
         "inv:all": "aws cloudfront create-invalidation --distribution-id $npm_config_cfDistributionID --paths '/*'",
         "inv:sounds": "aws cloudfront create-invalidation --distribution-id $npm_config_cfDistributionID --paths '/cache/*'",
-        "inv:static": "aws cloudfront create-invalidation --distribution-id $npm_config_cfDistributionID --paths '/static/*'"
+        "inv:static": "aws cloudfront create-invalidation --distribution-id $npm_config_cfDistributionID --paths '/static/*'",
+        "xs3": "aws s3 rm s3://$npm_config_s3Static/cache/ --recursive"
     }
 }
