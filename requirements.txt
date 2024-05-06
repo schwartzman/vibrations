@@ -8,7 +8,7 @@ Flask==1.0.2
 idna==2.7
 importlib-resources==1.0.1
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==3.1.4
 jmespath==0.9.3
 livereload==2.5.1 # pyup: != 2.5.2 # buggy
 MarkupSafe==1.0
